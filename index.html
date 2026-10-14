@@ -1,35 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RSVP - Onze Bruiloft</title>
     <!-- Elegant romantic Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <!-- Koppeling naar de CSS stylesheet -->
-    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/style.css" />
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="/Image/J_K-removebg-preview.png">
+    <link rel="icon" type="image/jpeg" href="/Image/J_K-removebg-preview.png" />
+  </head>
+  <body>
+    <div class="home">
+      <div class="light light1"></div>
+      <div class="light light2"></div>
+      <div class="light light3"></div>
+      <script>
+        for (let i = 0; i < 35; i++) {
+          const light = document.createElement("div");
+          p.className = `particle`;
+          p.style.left = `${Math.random() * 100}%`;
+          p.style.animationDuration = `${Math.random() * 5 + 5}s`;
+          document.body.appendChild(p);
+        }
+      </script>
+      <nav class="top-nav">
+        <a href="index.html" class="nav-link"
+          ><img
+            src="/Image/J_K-removebg-preview.png"
+            alt="Home"
+            class="nav-icon"
+        /></a>
+      </nav>
 
-</head>
-<body>
-
-    <nav class="top-nav">
-        <a href="index.html" class="nav-link"><img src="/Image/J_K-removebg-preview.png" alt="Home" class="nav-icon"></a>
-    </nav>
-
-    <div class="card-container">
+      <div class="card-container-home">
         <div class="floral-decoration top"></div>
-        
-        <header>
-            <p class="sub-title">Jadzia en Kevin gaan trouwen!</p>
-            <h1>Kom jij ook?</h1>
-            <div class="divider"><span>♥</span></div>
-            <p class="intro">Laat ons alstublieft voor <strong>15 mei</strong> weten of we je mogen verwelkomen op onze bijzondere dag.</p>
-        </header>
 
-    <a href="index.html" class="btn-nav-inschrijving">Bevestig je komst</a>
-</body>
+        <header>
+          <p class="info">08 oktober 2027</p>
+          <p class="info">Wij gaan trouwen</p>
+          <p class="home-title">Jadzia en Kevin</p>
+          <h1></h1>
+          <div class="hart"><span>♥</span></div>
+        </header>
+      </div>
+      <header>
+        <div class="Timelinn">
+          <div class="ceremonie">
+            <div class="txt-rechts">
+              <p class="title">Ceremonie</p>
+              <p class="info">08 oktober 2027</p>
+              <p class="info">14:00 - 15:00</p>
+              <p class="sub-info">Larstraat 198, 8930 Menen, België</p>
+            </div>
+          </div>
+          <div class="ceremonie">
+            <div class="txt-links">
+              <p class="title">Receptie</p>
+              <p class="info">18:00 - 19:00</p>
+            </div>
+          </div>
+          <div class="ceremonie">
+            <div class="txt-rechts">
+              <p class="title">Dinner</p>
+              <p class="info">19:00 - 21:00</p>
+            </div>
+          </div>
+          
+          <div class="ceremonie">
+            <div class="txt-links">
+              <p class="title">First dance</p>
+              <p class="info">21:00</p>
+            </div>
+          </div>
+          <div class="ceremonie">
+            <div class="txt-rechts">
+              <p class="title">Dans      feest</p>
+              <p class="info">21:00 - ...</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <a href="inschrijving.html" class="btn-nav-inschrijving"
+        >Bevestig je komst</a
+      >
+    </div>
+  </body>
 </html>

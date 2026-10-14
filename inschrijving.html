@@ -14,8 +14,19 @@
     <link rel="icon" type="image/jpeg" href="/Image/J_K-removebg-preview.png">
 
 </head>
-<body>
-
+<body class="inschrijving">
+    <div class="light light1"></div>
+    <div class="light light2"></div>
+    <div class="light light3"></div>
+    <script>
+        for (let i = 0; i < 3; i++) {
+            const light = document.createElement('div');
+            p.className = `particle`;
+            p.style.left = `${Math.random() * 100}%`;
+            p.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            document.body.appendChild(p);
+        }
+    </script>
     <nav class="top-nav">
         <a href="index.html" class="nav-link"><img src="/Image/J_K-removebg-preview.png" alt="Home" class="nav-icon"></a>
     </nav>
@@ -94,7 +105,7 @@
             <div class="heart-icon">♥</div>
             <h2>Dank je wel!</h2>
             <p>Je antwoord en foto('s) zijn liefdevol ontvangen. We kijken er enorm naar uit om deze fantastische dag samen te vieren!</p>
-            <a href="index.html" class="btn-nav-home">Terug naar het formulier (index.html)</a>
+            <a href="index.html" class="btn-nav-home">Meer info over het feest</a>
         </div>
     </div>
 
