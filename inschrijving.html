@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP - Onze Bruiloft</title>
+    <!-- Elegant romantic Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Koppeling naar de CSS stylesheet -->
+    <link rel="stylesheet" href="/CSS/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/Image/J_K-removebg-preview.png">
+
+</head>
+<body>
+
+    <nav class="top-nav">
+        <a href="index.html" class="nav-link"><img src="/Image/J_K-removebg-preview.png" alt="Home" class="nav-icon"></a>
+    </nav>
+
+    <div class="card-container">
+        <div class="floral-decoration top"></div>
+        
+        <header>
+            <p class="sub-title">Wij gaan trouwen!</p>
+            <h1>RSVP Bevestiging</h1>
+            <div class="divider"><span>♥</span></div>
+            <p class="intro">Laat ons alstublieft voor <strong>15 mei</strong> weten of we je mogen verwelkomen op onze bijzondere dag.</p>
+        </header>
+
+        <form id="rsvpForm">
+            <!-- Aanwezigheid keuze -->
+            <div class="form-group">
+                <label>Aanwezigheid *</label>
+                
+                <div class="radio-card">
+                    <input type="radio" id="opt_beide" name="aanwezigheid" value="Ja Ceremonie en maaltijd en feest" required>
+                    <label for="opt_beide">
+                        <span class="radio-title">Ja, ik ben er heel de dag bij!</span>
+                        <span class="radio-desc">Ceremonie, maaltijd & feest</span>
+                    </label>
+                </div>
+
+                <div class="radio-card">
+                    <input type="radio" id="opt_ceremonie" name="aanwezigheid" value="Alleen ceremonie">
+                    <label for="opt_ceremonie">
+                        <span class="radio-title">Alleen ceremonie</span>
+                    </label>
+                </div>
+
+                <div class="radio-card">
+                    <input type="radio" id="opt_maaltijd" name="aanwezigheid" value="Alleen Maaltijd en Feest">
+                    <label for="opt_maaltijd">
+                        <span class="radio-title">Alleen maaltijd & feest</span>
+                    </label>
+                </div>
+
+                <div class="radio-card">
+                    <input type="radio" id="opt_neen" name="aanwezigheid" value="neen">
+                    <label for="opt_neen">
+                        <span class="radio-title">Helaas, ik kan er niet bij zijn</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- EERST: Hoeveel personen / gezinsleden komen mee? -->
+            <div class="form-group conditional" id="aantalGezinsledenContainer">
+                <label for="aantalGezinsleden">Hoeveel extra gezinsleden of partners komen er mee?</label>
+                <p class="sub-label-info">Vul "0" in als je alleen komt. Totaal aantal personen wordt dan automatisch 1 (jijzelf).</p>
+                <input type="number" id="aantalGezinsleden" name="aantalGezinsleden" min="0" value="0">
+            </div>
+
+            <!-- DAN: Alle gasten (Hoofdgast = Gast 1 + overige gezinsleden) -->
+            <div class="form-group conditional" id="gezinsDieetContainer">
+                <label id="gastenLijstTitel">Gegevens van de gasten</label>
+                <div id="gezinsledenLijst"></div>
+                <button type="button" id="voegGezinslidToeBtn" class="btn-secondary">+ Extra gezinslid toevoegen</button>
+            </div>
+
+            <!-- Opmerkingen of vragen -->
+            <div class="form-group">
+                <label for="opmerkingen">Lieve boodschap, vragen of opmerkingen</label>
+                <textarea id="opmerkingen" name="opmerkingen" placeholder="Laat hier eventueel een lieve wens of vraag achter voor het bruidspaar..."></textarea>
+            </div>
+
+            <!-- Verzenden -->
+            <button type="submit" class="btn-primary">Verstuur Bevestiging ♥</button>
+        </form>
+
+        <!-- Succesbericht -->
+        <div id="succesBericht" class="success-message hidden">
+            <div class="heart-icon">♥</div>
+            <h2>Dank je wel!</h2>
+            <p>Je antwoord en foto('s) zijn liefdevol ontvangen. We kijken er enorm naar uit om deze fantastische dag samen te vieren!</p>
+            <a href="index.html" class="btn-nav-home">Terug naar het formulier (index.html)</a>
+        </div>
+    </div>
+
+    <!-- Koppeling naar het JavaScript bestand -->
+    <script src="script.js"></script>
+</body>
+</html>
