@@ -1,4 +1,4 @@
-/* Romantic & Elegant Wedding Theme */
+
 
 :root {
     --primary-color: rgb(225, 94, 13);    /* Requested button color */
@@ -494,20 +494,21 @@ textarea {
 }
 
 .btn-nav-inschrijving:hover {
-    background-color: var(--primary-color);
-    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.913);
+    color: #000000;
 }
 .btn-nav-inschrijving {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: var(--soft-orange-bg);
-    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.485);
+    color: rgb(124, 60, 7);
     text-decoration: none;
-    border: 1px solid var(--primary-color);
+    border: 1px solid white;
     border-radius: 20px;
+    font-family: arial, sans-serif,bold;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: all 0.25s ease;
     position: fixed;
     bottom: 20px;
