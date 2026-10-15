@@ -205,6 +205,185 @@
     text-align: center;
 }
 
+.story-section {
+    width: 80%;
+    margin: 2% auto 40px;
+    padding: clamp(24px, 4vw, 48px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 64px);
+    background: rgba(255, 255, 255, 0.368);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: white 0 0 5px 0, rgba(248, 245, 242, 0.5) 0 5px 30px;
+}
+
+.calendar-reminder {
+    width: 80%;
+    margin: 2% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    color: rgb(83, 12, 12);
+    text-align: left;
+}
+
+.calendar-link {
+    display: block;
+    flex: 0 0 clamp(112px, 14vw, 168px);
+    border-radius: 16px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.calendar-link:hover {
+    transform: translateY(-4px);
+    filter: drop-shadow(0 8px 12px rgba(83, 12, 12, 0.18));
+}
+
+.calendar-link:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 5px;
+}
+
+.calendar-icon {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.calendar-copy {
+    max-width: 440px;
+}
+
+.calendar-title {
+    margin-bottom: 6px;
+    color: brown;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.4rem;
+}
+
+.calendar-copy p:not(.calendar-title) {
+    margin-bottom: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.calendar-copy .calendar-date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.story-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(83, 12, 12, 0.14);
+}
+
+.story-content {
+    min-width: 0;
+    color: rgb(83, 12, 12);
+    text-align: center;
+}
+
+.story-eyebrow {
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.story-title {
+    margin-bottom: 16px;
+    color: brown;
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 400;
+}
+
+.story-content p:not(.story-eyebrow) {
+    margin-bottom: 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+    line-height: 1.7;
+}
+
+.dresscode-section {
+    width: 80%;
+    margin: 2% auto 40px;
+    padding: clamp(24px, 4vw, 48px);
+    background: rgba(255, 255, 255, 0.368);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: white 0 0 5px 0, rgba(248, 245, 242, 0.5) 0 5px 30px;
+}
+
+.dresscode-content {
+    max-width: 780px;
+    margin: 0 auto;
+    color: rgb(83, 12, 12);
+    text-align: center;
+}
+
+.dresscode-content p {
+    margin-bottom: 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+    line-height: 1.7;
+}
+
+.dresscode-content .dresscode-lead {
+    font-weight: 600;
+}
+
+.autumn-colors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(14px, 3vw, 28px);
+    margin-top: 24px;
+    list-style: none;
+}
+
+.autumn-color {
+    display: grid;
+    width: clamp(64px, 8vw, 96px);
+    aspect-ratio: 1;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    font-weight: 500;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.autumn-color-orange {
+    background: #ff5f00;
+}
+
+.autumn-color-yellow {
+    background: #ffba00;
+    color: #4a2a00;
+    text-shadow: none;
+}
+
+.autumn-color-red {
+    background: #c90000;
+}
+
+.autumn-color-brown {
+    background: #9c4b00;
+}
+
 header {
     text-align: center;
     margin-bottom: 35px;
@@ -679,10 +858,18 @@ textarea {
 
     .card-container,
     .card-container-home,
-    .Timelinn {
+    .Timelinn,
+    .story-section,
+    .calendar-reminder,
+    .dresscode-section {
         width: calc(100% - 32px);
         margin: 24px auto;
         padding: 28px 20px;
+    }
+
+    .calendar-reminder {
+        padding: 16px;
+        gap: 16px;
     }
 
     .card-container {
@@ -725,6 +912,16 @@ textarea {
         margin: 0;
         padding: 0 0 24px;
         border-bottom: 1px solid rgba(183, 135, 92, 0.35);
+    }
+
+    .story-section {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .story-photo {
+        max-height: 320px;
+        border-radius: 14px;
     }
 
     .ceremonie:last-child {
@@ -853,9 +1050,33 @@ textarea {
 @media (max-width: 480px) {
     .card-container,
     .card-container-home,
-    .Timelinn {
+    .Timelinn,
+    .story-section,
+    .calendar-reminder,
+    .dresscode-section {
         width: calc(100% - 24px);
         padding: 22px 16px;
+    }
+
+    .calendar-reminder {
+        gap: 12px;
+        padding: 16px 12px;
+    }
+
+    .calendar-link {
+        flex-basis: 96px;
+    }
+
+    .calendar-title {
+        font-size: 2rem;
+    }
+
+    .calendar-copy p:not(.calendar-title) {
+        font-size: 1rem;
+    }
+
+    .calendar-copy .calendar-date {
+        font-size: 0.75rem;
     }
 
     .card-container {
