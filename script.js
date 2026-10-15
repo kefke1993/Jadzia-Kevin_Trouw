@@ -9,9 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const gezinsledenLijst = document.getElementById('gezinsledenLijst');
     const voegGezinslidToeBtn = document.getElementById('voegGezinslidToeBtn');
     const succesBericht = document.getElementById('succesBericht');
+    
+    // Zoek de verzendknop op in je formulier (zorg dat je knop type="submit" heeft of een ID, hier zoeken we op type submit)
+    const submitBtn = rsvpForm.querySelector('button[type="submit"]') || rsvpForm.querySelector('.btn-submit');
 
-    // LET OP: Plak hieronder de Web-app URL van je Google Apps Script
-    const GOOGLE_SCRIPT_URL = "JOUW_GOOGLE_APPS_SCRIPT_URL_HIER";
+    // Jouw gekoppelde Google Apps Script Web-app URL
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzn1u7extmyK3UDi2qASUXrNT5-o8O8dcShzuK9SZBwN0ihVzDJ6cVQ40eOiEAUeDEq/exec";
 
     function updateFormulierZichtbaarheid() {
         const gekozenWaarde = document.querySelector('input[name="aanwezigheid"]:checked');
@@ -45,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Functie om een gast-blok te maken (Gast 1 is de hoofdgast die ingeeft)
+    // Functie om een gast-blok te maken (Gast 1 is de hoofdgast die invult)
     function maakGastBlok(index) {
         const isHoofdgast = (index === 1);
         const idSuffix = Date.now() + Math.random().toString(36).substring(2, 7);
@@ -110,11 +113,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Zorgt dat Gast 1 (hoofdgast) altijd aanwezig is, plus N extra gezinsleden
     function herberekenGastenLijst() {
         const extraGezinsleden = parseInt(aantalGezinsledenInput.value) || 0;
-        const gewenstTotaal = 1 + extraGezinsleden; // 1 hoofdgast + extra gezinsleden
+        const gewenstTotaal = 1 + extraGezinsleden;
         
         const huidigeBlokken = gezinsledenLijst.querySelectorAll('.gezinslid-blok');
 
-        // Maak altijd eerst Gast 1 aan als er nog geen lijst is
         if (huidigeBlokken.length === 0) {
             gezinsledenLijst.appendChild(maakGastBlok(1));
         }
@@ -127,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         } else if (gewenstTotaal < actueelAantal) {
             for (let i = actueelAantal; i > gewenstTotaal; i--) {
-                if (i > 1) { // Nooit Gast 1 (hoofdgast) verwijderen
+                if (i > 1) {
                     gezinsledenLijst.lastChild.remove();
                 }
             }
@@ -156,18 +158,30 @@ document.addEventListener('DOMContentLoaded', function () {
         herberekenGastenLijst();
     });
 
-    // Initialiseer eerste gastblok (Gast 1) bij het laden
     herberekenGastenLijst();
 
     // Formulier verzenden en doorsturen naar Google Sheets
     rsvpForm.addEventListener('submit', async function(e) {
         e.preventDefault(); 
 
+        // Blokkeer dubbelklikken door de knop direct uit te schakelen
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.dataset.origineleTekst = submitBtn.textContent;
+            submitBtn.textContent = "Bezig met verzenden...";
+        }
+
         const formData = new FormData(rsvpForm);
         const data = Object.fromEntries(formData.entries());
 
         const gastenBlokken = gezinsledenLijst.querySelectorAll('.gezinslid-blok');
-        if (gastenBlokken.length === 0) return;
+        if (gastenBlokken.length === 0) {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = submitBtn.dataset.origineleTekst || "Verzenden";
+            }
+            return;
+        }
 
         // Gast 1 (Hoofdgast)
         const hoofdgastBlok = gastenBlokken[0];
@@ -227,6 +241,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }).catch(error => {
             console.error('Fout bij verzenden:', error);
             alert('Er ging iets mis bij het verzenden. Probeer het later opnieuw.');
+            
+            // Herstel de knop mocht er onverhoopt toch een netwerkfout optreden
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = submitBtn.dataset.origineleTekst || "Verzenden";
+            }
         });
     });
 });
