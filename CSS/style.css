@@ -25,11 +25,11 @@
   overflow: scroll;
   background: linear-gradient(
     135deg,
-    #742a05,
-    #693c14,
-    #df5708,
-    #d06508,
-    #d06508
+    #f3c1b7,
+    #ebc29e,
+    #f3e7e0,
+    #b7875c,
+    #b78b64
   );
   background-size: 400% 400%;
   animation: bgMove 60s ease infinite;
@@ -139,10 +139,10 @@
 .card-container {
     width: 80%;
     margin: 7% auto auto auto;
-    background: var(--card-bg);
+    background: rgba(255, 255, 255, 0.368);
     padding: 45px 35px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(225, 94, 13, 0.50);
+    box-shadow: white 0px 0px 20px 0px, rgba(248, 245, 242, 0.5) 0px 10px 30px;
     border: 1px solid var(--border-color);
     position: relative;
 }
@@ -189,9 +189,17 @@ header {
 
 .sub-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
-    color: var(--subtitle-color);
-    margin-bottom: 5px;
+    font-size: 4rem;
+    color: brown;
+    margin-bottom: 10px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sub-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    color: rgb(83, 12, 12);
+    margin-bottom: 10px;
 }
 .home-title {
     font-family: 'Great Vibes', cursive;
@@ -239,7 +247,7 @@ h1 {
     font-size: 2.4rem;
     font-weight: 600;
     letter-spacing: 1px;
-    color: var(--text-color);
+    color: rgb(83, 12, 12);
 }
 
 .divider {
@@ -283,7 +291,7 @@ h1 {
 
 .intro {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: rgb(112, 55, 9);
     max-width: 480px;
     margin: 0 auto;
 }
@@ -299,7 +307,7 @@ h1 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 6px;
-    color: var(--text-color);
+    color: rgb(83, 12, 12);;
 }
 
 .sub-label-info {
@@ -440,30 +448,31 @@ textarea {
 .btn-primary {
     display: block;
     width: 100%;
-    background-color: var(--primary-color);
-    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.485);
+    color: #884906;
     padding: 16px;
     border: none;
     border-radius: 30px;
     font-family: 'Cormorant Garamond', serif;
+     
     font-size: 1.3rem;
     font-weight: 600;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(225, 94, 13, 0.3);
+    box-shadow: 0 4px 15px rgba(233, 224, 218, 0.3);
     margin-top: 30px;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(225, 94, 13, 0.4);
+    background-color: rgba(255, 255, 255, 0.913);
+    color: #000000;
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.485);
+    color: rgb(124, 60, 7);
     padding: 10px 18px;
     border: 1px dashed var(--primary-color);
     border-radius: 20px;
@@ -476,7 +485,7 @@ textarea {
 }
 
 .btn-secondary:hover {
-    background-color: var(--soft-orange-bg);
+    background-color: rgba(235, 199, 177, 0.894);
 }
 
 .btn-nav-home {

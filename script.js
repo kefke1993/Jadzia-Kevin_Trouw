@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         div.className = 'gezinslid-blok' + (isHoofdgast ? ' hoofdgast-blok' : '');
         div.dataset.index = index;
 
-        const gastLabel = isHoofdgast ? "Gast 1 (Jijzelf - Persoon die invult)" : `Gast ${index} (Gezinslid / Partner)`;
+        const gastLabel = isHoofdgast ? "Jijzelf" : `Gast ${index} (Gezinslid / Partner)`;
 
         div.innerHTML = `
             <div class="gast-titel">♥ ${gastLabel}</div>
