@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             
             <div style="margin-top: 10px;">
-                <label style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 4px;">Foto van ${isHoofdgast ? 'jezelf' : 'dit gezinslid/partner'}:</label>
+                <label style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 4px;">Foto van ${isHoofdgast ? 'jezelf' : 'dit gezinslid/partner'} (Deze foto zal gebruikt worden voor de tafelindeling):</label>
                 <input type="file" accept="image/*" class="gast-foto file-input">
             </div>
 
