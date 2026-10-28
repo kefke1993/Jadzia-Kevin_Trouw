@@ -1,115 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trouw jadzia en Kevin</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="style.css?v=20261015-1">
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="J_K-removebg-preview.png">
-</head>
-<body class="inschrijving">
-    <div class="light light1"></div>
-    <div class="light light2"></div>
-    <div class="light light3"></div>
-    <script>
-        for (let i = 0; i < 3; i++) {
-            const light = document.createElement('div');
-            p.className = `particle`;
-            p.style.left = `${Math.random() * 100}%`;
-            p.style.animationDuration = `${Math.random() * 5 + 5}s`;
-            document.body.appendChild(p);
-        }
-    </script>
-    <nav class="top-nav">
-        <a href="index.html" class="nav-link"><img src="J_K-removebg-preview.png" alt="Home" class="nav-icon"></a>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Laat Jadzia en Kevin weten of je erbij bent op 8 oktober 2027."
+    />
+    <title>RSVP — Jadzia & Kevin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261028-7" />
+    <link rel="icon" type="image/jpeg" href="J_K-removebg-preview.png" />
+  </head>
+  <body class="inschrijving">
+    <header class="site-header compact-header">
+      <a class="brand-mark" href="index.html" aria-label="Terug naar Jadzia en Kevin">J<span>&</span>K</a>
+      <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Terug naar de uitnodiging</a>
+    </header>
 
-    <div class="card-container">
-        <div class="floral-decoration top"></div>
-        
-        <header>
-            <p class="sub-title">Jadzia & Kevin </p>
-            <p class="sub-txt">Gaan hun liefde bezegelen</p>
-            <h1>Kom jij ook?</h1>
-            <div class="divider"><span>♥</span></div>
-            <p class="sub-txt">Laat ons alstublieft voor <strong>31 augustus</strong> weten of we je mogen verwelkomen op onze bijzondere dag.</p>
-            
-        </header>
+    <main class="rsvp-layout">
+      <aside class="rsvp-intro">
+        <img
+          class="rsvp-photo"
+          src="event-receptie.jpg"
+          alt="Een warm gedekte tafel voor een feestelijke avond"
+          fetchpriority="high"
+        />
+        <div class="rsvp-intro-copy">
+          <p class="eyebrow">Een dag om samen te koesteren</p>
+          <h1>Vier je met ons mee?</h1>
+          <p>
+            Het zou ons ontzettend gelukkig maken deze bijzondere dag met jou
+            te delen. Laat ons hieronder weten of we op je mogen rekenen.
+          </p>
+          <p class="rsvp-deadline">Antwoord graag voor <strong>31 augustus</strong></p>
+          <span class="rsvp-signature">Liefs, Jadzia & Kevin</span>
+        </div>
+      </aside>
+
+      <section class="rsvp-card" aria-labelledby="rsvp-heading">
+        <div class="section-heading rsvp-heading">
+          <p class="eyebrow">8 oktober 2027 · Menen</p>
+          <h2 id="rsvp-heading">Jouw antwoord</h2>
+          <span class="heading-flourish" aria-hidden="true">— ❧ —</span>
+        </div>
 
         <form id="rsvpForm">
-            <!-- Aanwezigheid keuze -->
-            <div class="form-group">
-                <label>Aanwezigheid *</label>
-                
-                <div class="radio-card">
-                    <input type="radio" id="opt_beide" name="aanwezigheid" value="Ja Ceremonie en maaltijd en feest" required>
-                    <label for="opt_beide">
-                        <span class="radio-title">Ja, ik ben er heel de dag bij!</span>
-                        <span class="radio-desc">Ceremonie, maaltijd & feest</span>
-                    </label>
-                </div>
+          <div class="form-group" role="group" aria-label="Kies je aanwezigheid">
+            <label>Aanwezigheid *</label>
 
-                <div class="radio-card">
-                    <input type="radio" id="opt_ceremonie" name="aanwezigheid" value="Alleen ceremonie">
-                    <label for="opt_ceremonie">
-                        <span class="radio-title">Alleen ceremonie</span>
-                    </label>
-                </div>
-
-                <div class="radio-card">
-                    <input type="radio" id="opt_maaltijd" name="aanwezigheid" value="Alleen Maaltijd en Feest">
-                    <label for="opt_maaltijd">
-                        <span class="radio-title">Alleen maaltijd & feest</span>
-                    </label>
-                </div>
-
-                <div class="radio-card">
-                    <input type="radio" id="opt_neen" name="aanwezigheid" value="neen">
-                    <label for="opt_neen">
-                        <span class="radio-title">Helaas, ik kan er niet bij zijn</span>
-                    </label>
-                </div>
+            <div class="radio-card">
+              <input type="radio" id="opt_beide" name="aanwezigheid" value="Ja Ceremonie en maaltijd en feest" required />
+              <label for="opt_beide">
+                <span class="radio-title">Ja, ik ben er heel de dag bij!</span>
+                <span class="radio-desc">Ceremonie, maaltijd & feest</span>
+              </label>
             </div>
 
-            <!-- EERST: Hoeveel personen / gezinsleden komen mee? -->
-            <div class="form-group conditional" id="aantalGezinsledenContainer">
-                <label for="aantalGezinsleden">Hoeveel extra gezinsleden of partners komen er mee?</label>
-                <p class="sub-label-info">Jouw niet meegetelt</p>
-                <input type="number" id="aantalGezinsleden" name="aantalGezinsleden" min="0" value="0">
+            <div class="radio-card">
+              <input type="radio" id="opt_ceremonie" name="aanwezigheid" value="Alleen ceremonie" />
+              <label for="opt_ceremonie">
+                <span class="radio-title">Alleen ceremonie</span>
+              </label>
             </div>
 
-            <!-- DAN: Alle gasten (Hoofdgast = Gast 1 + overige gezinsleden) -->
-            <div class="form-group conditional" id="gezinsDieetContainer">
-                <label id="gastenLijstTitel">Gegevens van de gasten</label>
-                <div id="gezinsledenLijst"></div>
-                <button type="button" id="voegGezinslidToeBtn" class="btn-secondary">+ Extra gezinslid toevoegen</button>
+            <div class="radio-card">
+              <input type="radio" id="opt_maaltijd" name="aanwezigheid" value="Alleen Maaltijd en Feest" />
+              <label for="opt_maaltijd">
+                <span class="radio-title">Alleen maaltijd & feest</span>
+              </label>
             </div>
 
-            
+            <div class="radio-card">
+              <input type="radio" id="opt_neen" name="aanwezigheid" value="neen" />
+              <label for="opt_neen">
+                <span class="radio-title">Helaas, ik kan er niet bij zijn</span>
+              </label>
+            </div>
+          </div>
 
-            <!-- Verzenden -->
-            <button type="submit" class="btn-primary">Verstuur Bevestiging ♥</button>
-            <p class="paragraph">
-                De hierboven ingevulde gegevens zullen gebruikt worden volgens de privacywetgeving de foto's zullen gebruikt worden voor de tafelindeling en zullen zichtbaar zijn voor andere gasten.. Door het verzenden van dit formulier ga je akkoord met het gebruik van deze gegevens.
-            </p>
+          <div class="form-group conditional" id="aantalGezinsledenContainer">
+            <label for="aantalGezinsleden">Hoeveel extra gezinsleden of partners komen er mee?</label>
+            <p class="sub-label-info">Jouw niet meegeteld</p>
+            <input type="number" id="aantalGezinsleden" name="aantalGezinsleden" min="0" value="0" />
+          </div>
+
+          <div class="form-group conditional" id="gezinsDieetContainer">
+            <label id="gastenLijstTitel">Gegevens van de gasten</label>
+            <div id="gezinsledenLijst"></div>
+            <button type="button" id="voegGezinslidToeBtn" class="btn-secondary">+ Extra gezinslid toevoegen</button>
+          </div>
+
+          <button type="submit" class="btn-primary">Verstuur bevestiging <span aria-hidden="true">♥</span></button>
+          <p class="paragraph">
+            De hierboven ingevulde gegevens worden gebruikt volgens de privacywetgeving.
+            Foto's worden gebruikt voor de tafelindeling en kunnen zichtbaar zijn voor
+            andere gasten. Door dit formulier te verzenden ga je akkoord met het gebruik
+            van deze gegevens.
+          </p>
         </form>
 
-        <!-- Succesbericht -->
         <div id="succesBericht" class="success-message hidden">
-            <div class="heart-icon">♥</div>
-            <h2>Dank je wel!</h2>
-            <p>Je antwoord en foto('s) zijn liefdevol ontvangen. We kijken er enorm naar uit om deze fantastische dag samen te vieren!</p>
-            <a href="index.html" class="btn-nav-home">Meer info over het feest</a>
+          <div class="heart-icon" aria-hidden="true">♥</div>
+          <h2>Dank je wel!</h2>
+          <p>Je antwoord en foto('s) zijn liefdevol ontvangen. We kijken er enorm naar uit om deze fantastische dag samen te vieren!</p>
+          <a href="index.html" class="btn-nav-home">Terug naar de uitnodiging</a>
         </div>
-    </div>
-    
-    <!-- Koppeling naar het JavaScript bestand -->
+      </section>
+    </main>
+
+    <footer class="site-footer rsvp-footer">
+      <p class="footer-names">Jadzia <span>&</span> Kevin</p>
+      <p>Met liefde, voor altijd</p>
+    </footer>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

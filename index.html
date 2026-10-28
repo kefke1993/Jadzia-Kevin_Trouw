@@ -3,159 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trouw jadzia en Kevin</title>
-    <!-- Google Fonts -->
+    <meta
+      name="description"
+      content="Vier de liefde met Jadzia en Kevin op 8 oktober 2027. Bekijk het programma en bevestig je komst."
+    />
+    <title>Jadzia & Kevin — 8 oktober 2027</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="style.css?v=20261015-2" />
-    <!-- Favicon -->
+    <link rel="stylesheet" href="style.css?v=20261028-8" />
     <link rel="icon" type="image/jpeg" href="J_K-removebg-preview.png" />
   </head>
   <body>
-    <div class="home">
-      <div class="light light1"></div>
-      <div class="light light2"></div>
-      <div class="light light3"></div>
-      <script>
-        for (let i = 0; i < 35; i++) {
-          const light = document.createElement("div");
-          p.className = `particle`;
-          p.style.left = `${Math.random() * 100}%`;
-          p.style.animationDuration = `${Math.random() * 5 + 5}s`;
-          document.body.appendChild(p);
-        }
-      </script>
-      <!-- Navigatiebalk -->
-      <nav class="top-nav">
-        <a href="index.html" class="nav-link"
-          ><img
-            src="J_K-removebg-preview.png"
-            alt="Home"
-            class="nav-icon"
-        /></a>
+    <header class="site-header">
+      <a class="brand-mark" href="index.html" aria-label="Jadzia en Kevin, home">J<span>&</span>K</a>
+      <nav class="site-nav" aria-label="Hoofdnavigatie">
+        <a href="#onze-dag">De dag</a>
+        <a href="#verhaal">Ons verhaal</a>
+        <a href="#dresscode">Dresscode</a>
+        <a class="nav-rsvp" href="inschrijving.html">RSVP <span aria-hidden="true">↗</span></a>
       </nav>
-<!-- title balk -->
-      <div class="card-container-home">
-        <div class="floral-decoration top"></div>
+    </header>
 
-        <header>
-          <p class="info">08 oktober 2027</p>
-          <p class="info">Wij gaan trouwen</p>
-          <p class="home-title">Jadzia en Kevin</p>
-          <h1></h1>
-          <div class="hart"><span>♥</span></div>
-        </header>
-      </div>
-      <!-- Kalender herinnering -->
-      <div class="calendar-reminder">
+    <main class="home">
+      <section class="invitation-hero" aria-labelledby="invitation-title">
+        <img
+          class="hero-photo"
+          src="event-ceremonie.jpg"
+          alt="Een warme, romantische sfeer tijdens een trouwceremonie"
+          fetchpriority="high"
+        />
+        <div class="hero-frame" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Met liefde nodigen wij je uit</p>
+          <h1 id="invitation-title">Jadzia <span>&</span> Kevin</h1>
+          <p class="hero-intro">gaan trouwen</p>
+          <p class="hero-date">8 oktober 2027</p>
+          <p class="hero-place">Menen <span aria-hidden="true">·</span> België</p>
+          <a class="button button-light" href="inschrijving.html">Laat ons weten of je komt <span aria-hidden="true">↗</span></a>
+        </div>
+        <span class="hero-side-note" aria-hidden="true">En de liefde schreef ons verhaal</span>
+      </section>
+
+      <section class="detail-strip" aria-label="In het kort">
+        <div class="detail-item">
+          <span class="detail-icon" aria-hidden="true">♡</span>
+          <p class="detail-label">De datum</p>
+          <p class="detail-value">8 oktober 2027</p>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon" aria-hidden="true">⌖</span>
+          <p class="detail-label">De plek</p>
+          <p class="detail-value">Menen, België</p>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon" aria-hidden="true">✧</span>
+          <p class="detail-label">Het gezelschap</p>
+          <p class="detail-value">Jij, wij en onze dierbaren</p>
+        </div>
         <a
-          class="calendar-link"
+          class="detail-item calendar-download"
           href="trouw-kevin-jadzia.ics"
           download="trouw-kevin-jadzia.ics"
-          aria-label="Download de agenda-uitnodiging voor Trouw Kevin en Jadzia op 8 oktober 2027"
+          aria-label="Download onze trouwdag voor je agenda"
         >
-          <img
-            class="calendar-icon"
-            src="image-removebg-preview.png"
-            alt="Kalender voor oktober 2027 met een hartje op de 8e"
-            width="420"
-            height="500"
-          />
+          <span class="detail-icon" aria-hidden="true">＋</span>
+          <span class="detail-label">Bewaar de datum</span>
+          <span class="detail-value">Zet in je agenda</span>
         </a>
-        <div class="calendar-copy">
-          <p class="calendar-title">Bewaar de datum</p>
-          <p>Klik op de kalender om onze trouwdag aan je agenda toe te voegen.</p>
-          <p class="calendar-date">8 oktober 2027 · 18:00–03:00</p>
-        </div>
-      </div>
-      <header>
+      </section>
+
+      <section class="love-note" aria-label="Een persoonlijke boodschap">
+        <span class="love-note-flourish" aria-hidden="true">♡</span>
+        <p class="eyebrow">Een klein woordje uit ons hart</p>
+        <h2>Liefde is mooier als je haar deelt.</h2>
+        <p>
+          Jullie horen bij de mooiste hoofdstukken van ons verhaal. Daarom
+          vieren we deze dag het liefst met jullie aan onze zijde.
+        </p>
+        <span class="love-note-heart" aria-hidden="true">♥</span>
+      </section>
+
+      <section class="day-section page-section" id="onze-dag" aria-labelledby="day-title">
+        <header class="section-heading">
+          <p class="eyebrow">Met de mensen die ons dierbaar zijn</p>
+          <h2 id="day-title">Onze dag, samen met jullie</h2>
+          <p>Volg de momenten van onze dag, van het eerste ja-woord tot de laatste dans.</p>
+        </header>
         <div class="Timelinn">
-          <div class="ceremonie">
-            <img
-              class="event-photo"
-              src="event-ceremonie.jpg"
-              alt="Sfeervolle trouwceremonie"
-              loading="lazy"
-              decoding="async"
-            />
+          <article class="ceremonie">
+            <img class="event-photo" src="ceremonie.jpg" alt="Sfeervolle trouwceremonie" loading="lazy" decoding="async" />
             <div class="event-content">
+              <span class="event-number" aria-hidden="true">01</span>
+              <p class="event-date">Vrijdag <span>·</span> 8 oktober</p>
               <p class="title">Ceremonie</p>
-              <p class="info">08 oktober 2027</p>
-              <p class="info">14:00 - 15:00</p>
-              <p class="sub-info">Larstraat 198, 8930 Menen, België</p>
+              <time class="info" datetime="2027-10-08T14:00">14:00 <span>—</span> 15:00</time>
+              <p class="sub-info">Larstraat 198<br />8930 Menen, België</p>
             </div>
-          </div>
-          <div class="ceremonie">
-            <img
-              class="event-photo"
-              src="event-receptie.jpg"
-              alt="Feestelijk gedekte tafel voor de receptie"
-              loading="lazy"
-              decoding="async"
-            />
+          </article>
+          <article class="ceremonie">
+            <img class="event-photo" src="receptie.jpg" alt="Feestelijk gedekte tafel voor de receptie" loading="lazy" decoding="async" />
             <div class="event-content">
+              <span class="event-number" aria-hidden="true">02</span>
+              <p class="event-date">Samen klinken</p>
               <p class="title">Receptie</p>
-              <p class="info">18:00 - 19:00</p>
+              <time class="info" datetime="2027-10-08T18:00">18:00 <span>—</span> 19:00</time>
+              <p class="sub-info">Op ons, op jullie, op de liefde</p>
             </div>
-          </div>
-          <div class="ceremonie">
-            <img
-              class="event-photo"
-              src="event-dinner.jpg"
-              alt="Een mooi opgedekte tafel voor het diner"
-              loading="lazy"
-              decoding="async"
-            />
+          </article>
+          <article class="ceremonie">
+            <img class="event-photo" src="dinner.jpg" alt="Een mooi opgedekte tafel voor het diner" loading="lazy" decoding="async" />
             <div class="event-content">
-              <p class="title">Dinner</p>
-              <p class="info">19:00 - 21:00</p>
+              <span class="event-number" aria-hidden="true">03</span>
+              <p class="event-date">Aan tafel</p>
+              <p class="title">Diner</p>
+              <time class="info" datetime="2027-10-08T19:00">19:00 <span>—</span> 21:00</time>
+              <p class="sub-info">Lekker eten en mooie verhalen</p>
             </div>
-          </div>
-
-          <div class="ceremonie">
-            <img
-              class="event-photo"
-              src="event-first-dance.jpg"
-              alt="Trouwboeket in romantische belichting"
-              loading="lazy"
-              decoding="async"
-            />
+          </article>
+          <article class="ceremonie">
+            <img class="event-photo" src="first-dance.jpg" alt="Trouwboeket in romantische belichting" loading="lazy" decoding="async" />
             <div class="event-content">
-              <p class="title">First dance</p>
-              <p class="info">21:00</p>
+              <span class="event-number" aria-hidden="true">04</span>
+              <p class="event-date">Een moment voor ons twee</p>
+              <p class="title">Eerste dans</p>
+              <time class="info" datetime="2027-10-08T21:00">21:00</time>
+              <p class="sub-info">Onze eerste dans als echtpaar</p>
             </div>
-          </div>
-          <div class="ceremonie">
-            <img
-              class="event-photo"
-              src="event-dansfeest.jpg"
-              alt="Sfeervolle lichtshow met dansende feestgangers"
-              loading="lazy"
-              decoding="async"
-            />
+          </article>
+          <article class="ceremonie">
+            <img class="event-photo" src="dansfeest.jpg" alt="Sfeervolle lichtshow met dansende feestgangers" loading="lazy" decoding="async" />
             <div class="event-content">
-              <p class="title">Dans feest</p>
-              <p class="info">21:00 - ...</p>
+              <span class="event-number" aria-hidden="true">05</span>
+              <p class="event-date">De avond is nog jong</p>
+              <p class="title">Dansfeest</p>
+              <time class="info" datetime="2027-10-08T21:00">Vanaf 21:00</time>
+              <p class="sub-info">Samen maken we herinneringen</p>
             </div>
-          </div>
+          </article>
         </div>
-      </header>
+      </section>
 
-      <section class="story-section" aria-labelledby="story-title">
-        <img
-          class="story-photo"
-          src="event-ceremonie.jpg"
-          alt="Voorbeeldfoto van een bruidspaar op hun trouwdag"
-          loading="lazy"
-          decoding="async"
-        />
+      <section class="story-section page-section" id="verhaal" aria-labelledby="story-title">
+        <div class="story-image-wrap">
+          <img
+            class="story-photo"
+            src="event-ceremonie.jpg"
+            alt="Een romantische sfeer voor de bijzondere dag van Jadzia en Kevin"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="image-caption">Met elkaar, voor altijd</span>
+        </div>
         <div class="story-content">
-          <p class="story-eyebrow">Samen op weg naar onze grote dag</p>
+          <p class="eyebrow">Samen op weg naar onze grote dag</p>
           <h2 class="story-title" id="story-title">Ons verhaal</h2>
           <p>
             Sommige ontmoetingen maken je wereld een beetje mooier. Vanaf het
@@ -168,35 +172,69 @@
             dag te vieren met de mensen die ons dierbaar zijn. We kunnen niet
             wachten om dit nieuwe hoofdstuk met jullie te delen!
           </p>
+          <span class="story-signature">Met heel ons hart, Jadzia & Kevin</span>
         </div>
       </section>
 
-      <section class="dresscode-section" aria-labelledby="dresscode-title">
-        <div class="dresscode-content">
-          <h2 class="story-title" id="dresscode-title">Dresscode</h2>
-          <p class="dresscode-lead">
-            Jouw aanwezigheid is het belangrijkste voor ons!
-          </p>
+      <section class="dresscode-section page-section" id="dresscode" aria-labelledby="dresscode-title">
+        <div class="dresscode-copy">
+          <p class="eyebrow">Kleding waarin jij je fijn voelt</p>
+          <h2 id="dresscode-title">Herfst op z’n mooist</h2>
+          <p class="dresscode-lead">Jouw aanwezigheid is het belangrijkste voor ons.</p>
           <p>
-            Kom daarom gewoon zoals je bent en draag vooral kleding waarin jij
-            je het beste voelt. Een speciale outfit is niet nodig.
-          </p>
-          <p>
-            Beetje inspiratie nodig? Ons thema is herfst. Denk aan warme tinten
-            zoals oranje, geel, rood en bruin.
+            Kom zoals je bent; een speciale outfit is niet nodig. Zin in wat
+            inspiratie? Ons thema is herfst: denk aan warme, natuurlijke tinten.
           </p>
           <ul class="autumn-colors" aria-label="Kleureninspiratie voor het herfstthema">
-            <li class="autumn-color autumn-color-orange">Oranje</li>
-            <li class="autumn-color autumn-color-yellow">Geel</li>
-            <li class="autumn-color autumn-color-red">Rood</li>
-            <li class="autumn-color autumn-color-brown">Bruin</li>
+            <li class="autumn-color autumn-color-orange"><span>Roest</span></li>
+            <li class="autumn-color autumn-color-yellow"><span>Oker</span></li>
+            <li class="autumn-color autumn-color-red"><span>Bordeaux</span></li>
+            <li class="autumn-color autumn-color-brown"><span>Kastanje</span></li>
+            <li class="autumn-color autumn-color-sage"><span>Salie</span></li>
           </ul>
+        </div>
+        <div class="dresscode-art" aria-hidden="true">
+          <span class="botanical botanical-one">
+            <svg viewBox="0 0 150 200" focusable="false">
+              <path d="M22 190C43 145 73 83 130 14" />
+              <path d="M41 151C19 151 8 139 9 121 28 120 41 132 41 151Z" />
+              <path d="M50 132C70 129 81 116 79 98 60 99 49 112 50 132Z" />
+              <path d="M64 106C43 104 33 91 35 73 54 75 66 88 64 106Z" />
+              <path d="M75 85C94 81 104 67 100 50 82 53 72 67 75 85Z" />
+              <path d="M91 59C72 57 62 44 66 27 83 29 94 42 91 59Z" />
+              <path d="M103 39C120 35 130 22 127 7 111 10 101 23 103 39Z" />
+            </svg>
+          </span>
+          <span class="dresscode-seal">Kom<br />zoals je<br />bent</span>
+          <span class="botanical botanical-two">
+            <svg viewBox="0 0 150 200" focusable="false">
+              <path d="M22 190C43 145 73 83 130 14" />
+              <path d="M41 151C19 151 8 139 9 121 28 120 41 132 41 151Z" />
+              <path d="M50 132C70 129 81 116 79 98 60 99 49 112 50 132Z" />
+              <path d="M64 106C43 104 33 91 35 73 54 75 66 88 64 106Z" />
+              <path d="M75 85C94 81 104 67 100 50 82 53 72 67 75 85Z" />
+              <path d="M91 59C72 57 62 44 66 27 83 29 94 42 91 59Z" />
+              <path d="M103 39C120 35 130 22 127 7 111 10 101 23 103 39Z" />
+            </svg>
+          </span>
         </div>
       </section>
 
-      <a href="inschrijving.html" class="btn-nav-inschrijving"
-        >Bevestig je komst</a
-      >
-    </div>
+      <section class="rsvp-banner" aria-labelledby="rsvp-title">
+        <div>
+          <p class="eyebrow">We vieren het liefst samen</p>
+          <h2 id="rsvp-title">Ben je erbij?</h2>
+          <p>Jouw lach, warmte en aanwezigheid maken onze dag compleet.</p>
+          <p class="rsvp-deadline">Laat ons voor <strong>31 augustus</strong> weten of je erbij bent.</p>
+        </div>
+        <a class="button button-dark" href="inschrijving.html">Bevestig je komst <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span class="footer-flourish" aria-hidden="true">♡</span>
+      <p class="footer-names">Jadzia <span>&</span> Kevin</p>
+      <p>8 oktober 2027 <span aria-hidden="true">·</span> Een dag vol liefde, voor altijd in ons hart</p>
+    </footer>
   </body>
 </html>
