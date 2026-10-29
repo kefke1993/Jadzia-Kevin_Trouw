@@ -1,3 +1,4 @@
+/* Kleuren, typografie en andere globale ontwerpvariabelen. */
 :root {
   color-scheme: light;
   --paper: #fbf8f1;
@@ -62,6 +63,7 @@ input {
   background: var(--olive);
 }
 
+/* Header en navigatie van beide pagina's. */
 .site-header {
   position: relative;
   z-index: 5;
@@ -123,6 +125,7 @@ input {
   font-size: 0.8rem;
 }
 
+/* Hoofduitnodiging: fotobanner en tekst in het midden. */
 .home {
   width: min(100% - 64px, 1240px);
   margin: 0 auto;
@@ -316,6 +319,7 @@ input {
   border-color: rgba(242, 220, 202, 0.88);
 }
 
+/* Persoonlijke boodschap onder de uitnodiging. */
 .love-note {
   position: relative;
   max-width: 720px;
@@ -377,6 +381,7 @@ input {
   transform: translateX(-50%);
 }
 
+/* Korte praktische gegevens en kalenderlink. */
 .detail-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -432,6 +437,7 @@ input {
   background: rgba(100, 109, 77, 0.08);
 }
 
+/* Tijdlijn van de trouwdag. */
 .page-section {
   margin: 0 auto;
   scroll-margin-top: 35px;
@@ -494,7 +500,7 @@ input {
   text-align: left;
 }
 
-.ceremonie:nth-child(even) .event-photo {
+.ceremonie:nth-child(even) .event-photo-action {
   grid-column: 2;
   grid-row: 1;
 }
@@ -539,10 +545,20 @@ input {
   transform: translate(50%, -50%);
 }
 
-.event-photo {
+.event-photo-action {
   display: block;
   width: 100%;
   height: 235px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.event-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
   border: 4px solid #fffdf8;
   box-shadow: 0 10px 28px rgba(63, 54, 41, 0.1);
   object-fit: cover;
@@ -601,6 +617,7 @@ input {
   line-height: 1.4;
 }
 
+/* Verhaal en bijbehorende foto. */
 .story-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
@@ -676,6 +693,7 @@ input {
   font-size: 2.2rem;
 }
 
+/* Dresscode, kleurstalen en botanische illustraties. */
 .dresscode-section {
   display: grid;
   min-height: 300px;
@@ -792,6 +810,7 @@ input {
   transform: scaleX(-1) rotate(-12deg);
 }
 
+/* RSVP-oproep onderaan de hoofdpagina. */
 .rsvp-banner {
   display: flex;
   margin: 30px 0 60px;
@@ -861,6 +880,7 @@ input {
   text-transform: none;
 }
 
+/* Inschrijfpagina: intro, RSVP-formulier en bedankbericht. */
 .compact-header {
   width: min(100% - 64px, 1240px);
 }
@@ -966,6 +986,7 @@ input {
   letter-spacing: 0.35em;
 }
 
+/* Velden, keuzekaarten en dynamische gegevens van gasten. */
 .form-group {
   margin-bottom: 20px;
 }
@@ -1158,10 +1179,12 @@ input[type="number"]:focus {
   font-size: 0.74rem;
 }
 
+/* Hulppatroon voor velden en de succesmelding. */
 .hidden {
   display: none !important;
 }
 
+/* Actieknoppen van het RSVP-formulier. */
 .btn-primary,
 .btn-secondary,
 .btn-nav-home {
@@ -1255,6 +1278,7 @@ input[type="number"]:focus {
   margin: 0 auto;
 }
 
+/* Zichtbare focus voor toetsenbordnavigatie. */
 .button:focus-visible,
 .site-nav a:focus-visible,
 .back-link:focus-visible,
@@ -1265,6 +1289,7 @@ input:focus-visible {
   outline-offset: 3px;
 }
 
+/* Aanpassingen voor tablets en smallere laptops. */
 @media (max-width: 900px) {
   .home,
   .site-header,
@@ -1290,6 +1315,7 @@ input:focus-visible {
   }
 }
 
+/* Mobiele opmaak. */
 @media (max-width: 640px) {
   .site-header,
   .compact-header {
@@ -1414,13 +1440,17 @@ input:focus-visible {
     gap: 0;
   }
 
-  .ceremonie .event-photo,
-  .ceremonie:nth-child(even) .event-photo {
+  .ceremonie .event-photo-action,
+  .ceremonie:nth-child(even) .event-photo-action {
     width: 100%;
     height: auto;
     aspect-ratio: 1.55;
     grid-row: 1;
     grid-column: 1;
+  }
+
+  .event-photo-action .event-photo {
+    height: 100%;
   }
 
   .ceremonie .event-content,
@@ -1522,6 +1552,7 @@ input:focus-visible {
   }
 }
 
+/* Extra compacte telefoons. */
 @media (max-width: 380px) {
   .brand-mark {
     font-size: 1.28rem;
@@ -1564,6 +1595,7 @@ input:focus-visible {
   }
 }
 
+/* Respecteer de systeemvoorkeur voor minder beweging. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1577,4 +1609,446 @@ input:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+/* Oudere RSVP-afwerking: de gedeelde themalaag hieronder stemt deze kleuren gelijk. */
+body.inschrijving { --paper: #fbf6f2; --paper-deep: #efe3dc; --ink: #352925; --muted: #796961; --line: #e6d6ce; --olive: #806057; --olive-dark: #64463f; --rust: #a65f62; --rust-dark: #75434a; --ochre: #bd9274; --sage: #e8ddd7; --blush: #f0d9d4; }
+body.inschrijving::before { background: radial-gradient(ellipse at 8% 16%, rgba(193, 130, 128, .13), transparent 30rem), radial-gradient(ellipse at 96% 82%, rgba(162, 119, 94, .11), transparent 32rem), var(--paper); }
+body.inschrijving .compact-header { border-color: #e6d6ce; }
+body.inschrijving .rsvp-layout { position: relative; gap: clamp(18px, 3vw, 38px); border: 0; background: transparent; }
+body.inschrijving .rsvp-intro { min-height: 650px; box-shadow: 0 24px 60px rgba(70, 43, 40, .12); }
+body.inschrijving .rsvp-intro::after { background: linear-gradient(180deg, rgba(48, 30, 31, .02) 10%, rgba(48, 30, 31, .8) 100%); }
+body.inschrijving .rsvp-photo { filter: saturate(.82) sepia(.08); }
+body.inschrijving .rsvp-intro-copy { position: relative; padding: 22px 0 0; }
+body.inschrijving .rsvp-intro-copy::before { position: absolute; top: 0; left: 0; width: 48px; height: 1px; background: #e9cbbd; content: ""; }
+body.inschrijving .rsvp-intro-copy .eyebrow { color: #f0d7c6; }
+body.inschrijving .rsvp-card { position: relative; padding: clamp(30px, 4.5vw, 56px); border: 1px solid rgba(205, 177, 164, .58); background: rgba(255, 252, 249, .92); box-shadow: 0 24px 60px rgba(70, 43, 40, .08); }
+body.inschrijving .rsvp-card::before { position: absolute; inset: 9px; border: 1px solid rgba(205, 177, 164, .28); content: ""; pointer-events: none; }
+body.inschrijving .rsvp-card > * { position: relative; }
+body.inschrijving .rsvp-heading h2 { color: #49332f; }
+body.inschrijving .heading-flourish { color: var(--rust); }
+body.inschrijving .form-group > label { color: #513a36; }
+body.inschrijving .radio-card { padding: 14px 16px; border-color: #eadbd4; border-radius: 3px; background: #fffdfa; transition: border-color .2s ease, background .2s ease, transform .2s ease, box-shadow .2s ease; }
+body.inschrijving .radio-card:hover { border-color: #c99b91; background: #fff8f5; transform: translateY(-1px); }
+body.inschrijving .radio-card:has(input:checked) { border-color: #ad6e70; background: #f8eeeb; box-shadow: inset 3px 0 #ad6e70; }
+body.inschrijving .radio-title { color: #44332f; }
+body.inschrijving input[type="text"], body.inschrijving input[type="number"] { border-color: #e5d5ce; border-radius: 2px; background: #fffdfa; }
+body.inschrijving input[type="text"]:focus, body.inschrijving input[type="number"]:focus { border-color: #ad6e70; box-shadow: 0 0 0 3px rgba(173, 110, 112, .13); }
+body.inschrijving .gezinslid-blok { border-color: #e7d7d0; border-radius: 3px; background: #fffdfa; }
+body.inschrijving .hoofdgast-blok { border-left-color: #ad6e70; }
+body.inschrijving .gast-titel { color: #75434a; }
+body.inschrijving .checkbox-card { border-color: #eadbd4; background: #fbf4f1; }
+body.inschrijving .checkbox-card input[type="checkbox"] { accent-color: #a65f62; }
+body.inschrijving .btn-primary, body.inschrijving .btn-nav-home { border-color: #75434a; border-radius: 2px; background: #75434a; }
+body.inschrijving .btn-primary:hover, body.inschrijving .btn-nav-home:hover { border-color: #5d363d; background: #5d363d; }
+body.inschrijving .btn-secondary { border-color: #dfc8bf; color: #75434a; }
+body.inschrijving .btn-secondary:hover { border-color: #75434a; color: #fffaf0; }
+body.inschrijving .btn-verwijder:hover { border-color: #a65f62; background: #a65f62; }
+body.inschrijving .success-message .heart-icon { color: #a65f62; }
+body.inschrijving .rsvp-footer { border-color: #e6d6ce; }
+@media (max-width: 640px) { body.inschrijving .rsvp-layout { gap: 14px; } body.inschrijving .rsvp-intro { min-height: 360px; } body.inschrijving .rsvp-card { padding: 30px 24px; } body.inschrijving .rsvp-card::before { inset: 7px; } }
+
+/* Gedeelde romantische afwerking van de uitnodigingspagina. */
+:root {
+  --paper: #fbf8f3;
+  --paper-deep: #f0ebe2;
+  --ink: #302e27;
+  --muted: #747264;
+  --line: #dedbd0;
+  --olive: #697057;
+  --olive-dark: #50583f;
+  --rust: #a87870;
+  --rust-dark: #78534d;
+  --ochre: #b5a17b;
+  --sage: #e7e8df;
+  --blush: #eadbd5;
+}
+
+body:not(.inschrijving)::before {
+  background:
+    radial-gradient(ellipse at 8% 20%, rgba(201, 169, 157, .12), transparent 32rem),
+    radial-gradient(ellipse at 95% 78%, rgba(117, 125, 94, .09), transparent 34rem),
+    var(--paper);
+}
+
+.site-header { border-color: #e4ded5; }
+.brand-mark span, .footer-names span { color: #a87870; }
+.site-nav .nav-rsvp { border-color: #c9cbbc; border-radius: 30px; background: rgba(255, 253, 249, .62); }
+.site-nav .nav-rsvp:hover { background: #697057; color: #fffdf8; }
+
+.invitation-hero {
+  border: 1px solid #d7d1c4;
+  border-radius: 46px 46px 28px 28px;
+  box-shadow: 0 22px 55px rgba(63, 58, 46, .12);
+}
+.hero-frame { inset: 14px; border-color: rgba(255, 250, 239, .62); border-radius: 36px 36px 20px 20px; }
+.hero-frame::before, .hero-frame::after { border-color: rgba(239, 225, 205, .9); }
+.hero-photo { filter: saturate(.62) sepia(.08); }
+.invitation-hero::before {
+  background:
+    linear-gradient(180deg, rgba(54, 51, 41, .08), rgba(49, 47, 39, .48)),
+    radial-gradient(ellipse at 50% 42%, rgba(242, 232, 211, .12), transparent 46%);
+}
+.hero-copy h1 { font-family: var(--display); font-weight: 400; letter-spacing: .015em; }
+.hero-copy h1 span { color: #e5d7b9; font-family: var(--script); }
+.hero-date { color: #f1e4cd; }
+.button-light { border-radius: 30px; background: rgba(80, 88, 63, .88); }
+.button-light:hover { background: #50583f; }
+
+.detail-strip { border-color: #dedbd0; }
+.detail-item { border-color: #dedbd0; }
+.detail-icon { color: #697057; }
+.love-note { border-color: #dedbd0; }
+.love-note h2, .event-number, .title { color: #78534d; }
+.love-note-flourish, .love-note-heart { color: #a87870; }
+.love-note-heart { background: var(--paper); }
+.event-photo { border-color: #fffdfa; border-radius: 4px; }
+.story-section { border: 1px solid #e3e0d6; border-radius: 22px; background: #f1f0e9; }
+.story-photo { border-radius: 3px; }
+.dresscode-section { border: 1px solid #e0e2d7; border-radius: 22px; background: #eceee6; }
+.dresscode-seal { border-color: rgba(105, 112, 87, .5); color: #697057; }
+.rsvp-banner { border: 1px solid #e6ddd4; border-radius: 22px; background: #f5eee8; }
+.button-dark { border-radius: 30px; background: #697057; }
+.button-dark:hover { background: #50583f; }
+.site-footer { border-color: #dedbd0; }
+.footer-flourish { color: #a87870; }
+
+body.inschrijving .rsvp-layout { border-radius: 22px; }
+body.inschrijving .rsvp-intro { border-radius: 18px; }
+body.inschrijving .rsvp-card { border-radius: 18px; }
+body.inschrijving .rsvp-card::before { border-radius: 12px; }
+body.inschrijving .rsvp-intro h1 { font-family: var(--display); letter-spacing: .01em; }
+
+@media (max-width: 640px) {
+  .invitation-hero { border-radius: 26px 26px 18px 18px; }
+  .hero-frame { border-radius: 18px 18px 12px 12px; }
+  .story-section, .dresscode-section, .rsvp-banner { border-radius: 16px; }
+  body.inschrijving .rsvp-layout { border-radius: 0; }
+}
+
+/* Definitieve gedeelde kleurlaag voor de hoofdpagina en RSVP. */
+:root {
+  --paper: #fbfaf6;
+  --paper-deep: #f0efe7;
+  --ink: #34362d;
+  --muted: #747668;
+  --text-muted: #747668;
+  --line: #dedfd5;
+  --olive: #717a5b;
+  --olive-dark: #596245;
+  --rust: #ae8980;
+  --rust-dark: #80625b;
+  --ochre: #b9a984;
+  --sage: #e8eadf;
+  --blush: #f1e2dc;
+}
+
+body.inschrijving {
+  --paper: #fbfaf6;
+  --paper-deep: #f0efe7;
+  --ink: #34362d;
+  --muted: #747668;
+  --text-muted: #747668;
+  --line: #dedfd5;
+  --olive: #717a5b;
+  --olive-dark: #596245;
+  --rust: #ae8980;
+  --rust-dark: #80625b;
+  --ochre: #b9a984;
+  --sage: #e8eadf;
+  --blush: #f1e2dc;
+}
+
+body::before {
+  background:
+    radial-gradient(ellipse at 7% 16%, rgba(225, 201, 190, .17), transparent 31rem),
+    radial-gradient(ellipse at 94% 77%, rgba(159, 168, 137, .12), transparent 34rem),
+    var(--paper);
+}
+
+::selection { background: var(--olive); }
+.site-header { border-color: var(--line); }
+.brand-mark span, .footer-names span { color: var(--rust); }
+.site-nav .nav-rsvp {
+  border-color: #cdd1c2;
+  border-radius: 30px;
+  background: #f5f5ef;
+  color: var(--olive-dark);
+}
+.site-nav .nav-rsvp:hover { border-color: var(--olive); background: var(--olive); color: #fffdf8; }
+.site-nav a:hover, .back-link:hover { color: var(--rust-dark); }
+
+.home { max-width: 1160px; }
+.invitation-hero {
+  min-height: clamp(500px, 58vw, 680px);
+  border: 1px solid #d9d8cd;
+  border-radius: 12px;
+  background: #e8e7dd;
+  box-shadow: 0 20px 54px rgba(60, 63, 48, .12);
+}
+.hero-photo { filter: saturate(.58) sepia(.06) brightness(1.08); }
+.invitation-hero::before {
+  background: linear-gradient(180deg, rgba(49, 54, 42, .06), rgba(40, 45, 35, .34));
+}
+.hero-frame { inset: 14px; border-color: rgba(255, 253, 246, .72); border-radius: 7px; }
+.hero-frame::before, .hero-frame::after { border-color: rgba(239, 230, 207, .86); }
+.hero-copy {
+  width: min(730px, 88%);
+  padding: clamp(32px, 5vw, 58px) clamp(22px, 5vw, 64px);
+  border: 1px solid rgba(238, 233, 219, .9);
+  background: rgba(251, 250, 246, .87);
+  box-shadow: 0 16px 48px rgba(48, 50, 40, .12);
+  color: var(--ink);
+  backdrop-filter: blur(3px);
+}
+.hero-copy .eyebrow { color: var(--olive-dark); }
+.hero-copy h1 {
+  margin-top: 10px;
+  color: #34362d;
+  font-family: var(--display);
+  font-size: clamp(3.3rem, 7vw, 6rem);
+  letter-spacing: .015em;
+  text-shadow: none;
+}
+.hero-copy h1 span { color: var(--olive); font-size: .92em; }
+.hero-intro { color: var(--rust-dark); }
+.hero-date { color: var(--olive-dark); }
+.hero-place { color: var(--muted); }
+.hero-side-note { color: var(--rust-dark); }
+.button-light {
+  border-color: var(--olive);
+  border-radius: 30px;
+  background: var(--olive);
+  color: #fffdf8;
+}
+.button-light:hover { background: var(--olive-dark); }
+
+.detail-strip { border-color: var(--line); }
+.detail-item { border-color: var(--line); }
+.detail-icon { color: var(--olive); }
+.detail-label { color: var(--muted); }
+.detail-value { color: var(--ink); }
+.calendar-download:hover { background: rgba(113, 122, 91, .08); }
+.love-note { border-color: var(--line); }
+.love-note h2 { color: var(--rust-dark); }
+.love-note-flourish, .love-note-heart { color: var(--rust); }
+.love-note-heart { background: var(--paper); }
+.section-heading h2, .dresscode-copy h2, .rsvp-banner h2, .story-title { color: var(--ink); }
+.Timelinn::before { background: linear-gradient(180deg, transparent, #c9cbbb 7%, #c9cbbb 93%, transparent); }
+.event-number { border-color: #c9cbbb; color: var(--olive-dark); }
+.title { color: var(--rust-dark); }
+.event-date { color: var(--olive-dark); }
+.info { border-color: #d9d9cc; color: var(--olive-dark); }
+.event-photo { border-color: #fffefa; border-radius: 3px; box-shadow: 0 12px 30px rgba(55, 58, 44, .1); }
+.story-section {
+  border: 1px solid #e0e1d7;
+  border-radius: 12px;
+  background: #f0f1e9;
+}
+.story-section .image-caption { background: #f0f1e9; color: var(--rust-dark); }
+.story-image-wrap::before { border-color: #c9cbbb; }
+.story-signature { color: var(--rust-dark); }
+.dresscode-section {
+  border: 1px solid #dfe1d6;
+  border-radius: 12px;
+  background: #eceee5;
+}
+.dresscode-copy .dresscode-lead { color: var(--ink); }
+.dresscode-seal { border-color: rgba(113, 122, 91, .5); color: var(--olive-dark); }
+.autumn-color-orange { background: #c89484; }
+.autumn-color-yellow { background: #b9a984; }
+.autumn-color-red { background: #717a5b; }
+.autumn-color-brown { background: #8a8170; }
+.autumn-color-sage { background: #aab19a; }
+.rsvp-banner {
+  border: 1px solid #e8ded7;
+  border-radius: 12px;
+  background: #f4efea;
+}
+.rsvp-banner .rsvp-deadline { color: var(--olive-dark); }
+.button-dark { border-radius: 30px; background: var(--olive); }
+.button-dark:hover { background: var(--olive-dark); }
+.site-footer { border-color: var(--line); }
+.footer-flourish { color: var(--rust); }
+
+body.inschrijving .compact-header { border-color: var(--line); }
+body.inschrijving .rsvp-layout {
+  gap: clamp(18px, 3vw, 34px);
+  border: 0;
+  background: transparent;
+}
+body.inschrijving .rsvp-intro {
+  border-radius: 8px;
+  box-shadow: 0 20px 48px rgba(55, 58, 44, .13);
+}
+body.inschrijving .rsvp-intro::after {
+  background: linear-gradient(180deg, rgba(48, 54, 42, .02) 5%, rgba(48, 54, 42, .74) 100%);
+}
+body.inschrijving .rsvp-photo { filter: saturate(.62) sepia(.06); }
+body.inschrijving .rsvp-intro-copy .eyebrow { color: #e9e8d9; }
+body.inschrijving .rsvp-signature { color: #f1dfd4; }
+body.inschrijving .rsvp-card {
+  border: 1px solid #e1e1d7;
+  border-radius: 8px;
+  background: rgba(255, 254, 250, .96);
+  box-shadow: 0 18px 44px rgba(55, 58, 44, .07);
+}
+body.inschrijving .rsvp-card::before { border-color: rgba(190, 193, 176, .42); border-radius: 4px; }
+body.inschrijving .rsvp-heading h2, body.inschrijving .form-group > label { color: var(--ink); }
+body.inschrijving .heading-flourish { color: var(--rust); }
+body.inschrijving .radio-card {
+  border-color: #e0e1d7;
+  border-radius: 2px;
+  background: #fffefa;
+}
+body.inschrijving .radio-card:hover { border-color: #9da58a; background: #f7f8f2; }
+body.inschrijving .radio-card:has(input:checked) {
+  border-color: var(--olive);
+  background: #eef0e8;
+  box-shadow: inset 3px 0 var(--olive);
+}
+body.inschrijving .radio-card input[type="radio"],
+body.inschrijving .checkbox-card input[type="checkbox"] { accent-color: var(--olive); }
+body.inschrijving input[type="text"], body.inschrijving input[type="number"] {
+  border-color: #dfe0d6;
+  background: #fffefa;
+}
+body.inschrijving input[type="text"]:focus, body.inschrijving input[type="number"]:focus {
+  border-color: var(--olive);
+  box-shadow: 0 0 0 3px rgba(113, 122, 91, .13);
+}
+body.inschrijving .gezinslid-blok { border-color: #e0e1d7; background: #fffefa; }
+body.inschrijving .hoofdgast-blok { border-left-color: var(--olive); }
+body.inschrijving .gast-titel { color: var(--olive-dark); }
+body.inschrijving .checkbox-card { border-color: #e1e2d8; background: #f3f4ed; }
+body.inschrijving .btn-primary, body.inschrijving .btn-nav-home {
+  border-color: var(--olive);
+  border-radius: 30px;
+  background: var(--olive);
+}
+body.inschrijving .btn-primary:hover, body.inschrijving .btn-nav-home:hover {
+  border-color: var(--olive-dark);
+  background: var(--olive-dark);
+}
+body.inschrijving .btn-secondary { border-color: #d3d7c7; color: var(--olive-dark); }
+body.inschrijving .btn-secondary:hover { border-color: var(--olive); background: var(--olive); color: #fffdf8; }
+body.inschrijving .btn-verwijder:hover { border-color: var(--rust); background: var(--rust); }
+body.inschrijving .success-message .heart-icon { color: var(--rust); }
+body.inschrijving .rsvp-footer { border-color: var(--line); }
+
+@media (max-width: 640px) {
+  .invitation-hero { min-height: min(660px, 150vw); border-radius: 8px; }
+  .hero-copy { width: min(92%, 520px); padding: 34px 20px; }
+  .hero-copy h1 { font-size: clamp(2.8rem, 10vw, 4.2rem); }
+  .hero-date { letter-spacing: .23em; }
+  .hero-side-note { color: #f3e8dc; }
+  .story-section, .dresscode-section, .rsvp-banner { border-radius: 8px; }
+  body.inschrijving .rsvp-layout { gap: 14px; }
+  body.inschrijving .rsvp-intro { border-radius: 6px; }
+  body.inschrijving .rsvp-card { border-radius: 6px; }
+}
+
+/* Tijdlijnknoppen en het bijbehorende detailvenster. */
+.event-more {
+  display: inline-flex;
+  margin-top: 13px;
+  padding: 5px 0;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  border-bottom: 1px solid #cdd1c2;
+  background: transparent;
+  color: var(--olive-dark);
+  cursor: pointer;
+  font-size: .58rem;
+  font-weight: 500;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  transition: color .2s ease, border-color .2s ease;
+}
+.event-more:hover { border-color: var(--rust); color: var(--rust-dark); }
+.event-more span { font-size: .9rem; }
+.event-photo-action:focus-visible { outline: 2px solid var(--ochre); outline-offset: 4px; }
+
+.timeline-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(520px, calc(100% - 32px));
+  max-width: none;
+  max-height: min(78vh, 620px);
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #dfe1d6;
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 24px 80px rgba(43, 47, 36, .2);
+}
+.timeline-dialog[open] { animation: timeline-dialog-in .2s ease-out; }
+.timeline-dialog::backdrop { background: rgba(47, 51, 41, .48); backdrop-filter: blur(3px); }
+.timeline-dialog-panel { position: relative; padding: clamp(30px, 6vw, 48px); }
+.timeline-dialog-close {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid #dfe1d6;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--olive-dark);
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.timeline-dialog-close:hover { border-color: var(--olive); background: var(--sage); }
+.timeline-dialog-panel > .eyebrow { padding-right: 34px; color: var(--olive-dark); }
+.timeline-dialog-panel h2 {
+  margin-top: 7px;
+  color: var(--rust-dark);
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 7vw, 3.3rem);
+  font-weight: 400;
+  line-height: 1;
+}
+.timeline-dialog-row {
+  display: flex;
+  margin-top: 16px;
+  padding: 12px 0;
+  flex-direction: column;
+  gap: 3px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 1.15rem;
+}
+.timeline-dialog-label {
+  color: var(--olive-dark);
+  font-family: var(--body);
+  font-size: .56rem;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.timeline-dialog-location[hidden] { display: none; }
+.timeline-dialog-copy {
+  margin-top: 12px;
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+@keyframes timeline-dialog-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 640px) {
+  .event-more { font-size: .55rem; }
+  .event-photo-action { touch-action: manipulation; }
+  .timeline-dialog-panel { padding: 34px 25px 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .timeline-dialog[open] { animation: none; }
 }

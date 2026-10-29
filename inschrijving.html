@@ -14,16 +14,18 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=20261028-7" />
+    <link rel="stylesheet" href="style.css?v=20261029-2" />
     <link rel="icon" type="image/jpeg" href="J_K-removebg-preview.png" />
   </head>
   <body class="inschrijving">
+    <!-- Compacte navigatie terug naar de hoofduitnodiging. -->
     <header class="site-header compact-header">
       <a class="brand-mark" href="index.html" aria-label="Terug naar Jadzia en Kevin">J<span>&</span>K</a>
       <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Terug naar de uitnodiging</a>
     </header>
 
     <main class="rsvp-layout">
+      <!-- Introductie en persoonlijke boodschap naast het formulier. -->
       <aside class="rsvp-intro">
         <img
           class="rsvp-photo"
@@ -43,6 +45,7 @@
         </div>
       </aside>
 
+      <!-- Inschrijfformulier en bedankbericht na verzending. -->
       <section class="rsvp-card" aria-labelledby="rsvp-heading">
         <div class="section-heading rsvp-heading">
           <p class="eyebrow">8 oktober 2027 · Menen</p>
@@ -50,7 +53,9 @@
           <span class="heading-flourish" aria-hidden="true">— ❧ —</span>
         </div>
 
+        <!-- De RSVP-scriptlogica haalt de antwoorden uit dit formulier op. -->
         <form id="rsvpForm">
+          <!-- De keuze bepaalt of de extra gastvelden zichtbaar zijn. -->
           <div class="form-group" role="group" aria-label="Kies je aanwezigheid">
             <label>Aanwezigheid *</label>
 
@@ -84,6 +89,7 @@
             </div>
           </div>
 
+          <!-- Aantal extra gasten en hun gegevens worden dynamisch bijgewerkt. -->
           <div class="form-group conditional" id="aantalGezinsledenContainer">
             <label for="aantalGezinsleden">Hoeveel extra gezinsleden of partners komen er mee?</label>
             <p class="sub-label-info">Jouw niet meegeteld</p>
@@ -105,6 +111,7 @@
           </p>
         </form>
 
+        <!-- Dit bericht vervangt het formulier na verzending. -->
         <div id="succesBericht" class="success-message hidden">
           <div class="heart-icon" aria-hidden="true">♥</div>
           <h2>Dank je wel!</h2>
@@ -114,11 +121,13 @@
       </section>
     </main>
 
+    <!-- Footer van de RSVP-pagina. -->
     <footer class="site-footer rsvp-footer">
       <p class="footer-names">Jadzia <span>&</span> Kevin</p>
       <p>Met liefde, voor altijd</p>
     </footer>
 
+    <!-- Regelt de dynamische velden en verzending van de RSVP. -->
     <script src="script.js"></script>
   </body>
 </html>

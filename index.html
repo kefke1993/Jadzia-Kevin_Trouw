@@ -14,10 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=20261028-8" />
+    <link rel="stylesheet" href="style.css?v=20261029-5" />
     <link rel="icon" type="image/jpeg" href="J_K-removebg-preview.png" />
   </head>
   <body>
+    <!-- Siteheader met navigatie naar de onderdelen van de uitnodiging. -->
     <header class="site-header">
       <a class="brand-mark" href="index.html" aria-label="Jadzia en Kevin, home">J<span>&</span>K</a>
       <nav class="site-nav" aria-label="Hoofdnavigatie">
@@ -29,6 +30,7 @@
     </header>
 
     <main class="home">
+      <!-- Hoofduitnodiging met foto, namen en snelle RSVP-link. -->
       <section class="invitation-hero" aria-labelledby="invitation-title">
         <img
           class="hero-photo"
@@ -48,6 +50,7 @@
         <span class="hero-side-note" aria-hidden="true">En de liefde schreef ons verhaal</span>
       </section>
 
+      <!-- Praktische gegevens en link om de datum in de agenda op te slaan. -->
       <section class="detail-strip" aria-label="In het kort">
         <div class="detail-item">
           <span class="detail-icon" aria-hidden="true">♡</span>
@@ -76,6 +79,7 @@
         </a>
       </section>
 
+      <!-- Persoonlijke boodschap van het bruidspaar. -->
       <section class="love-note" aria-label="Een persoonlijke boodschap">
         <span class="love-note-flourish" aria-hidden="true">♡</span>
         <p class="eyebrow">Een klein woordje uit ons hart</p>
@@ -87,6 +91,7 @@
         <span class="love-note-heart" aria-hidden="true">♥</span>
       </section>
 
+      <!-- Tijdlijn met per moment een knop die het bijbehorende detailvenster opent. -->
       <section class="day-section page-section" id="onze-dag" aria-labelledby="day-title">
         <header class="section-heading">
           <p class="eyebrow">Met de mensen die ons dierbaar zijn</p>
@@ -94,59 +99,89 @@
           <p>Volg de momenten van onze dag, van het eerste ja-woord tot de laatste dans.</p>
         </header>
         <div class="Timelinn">
-          <article class="ceremonie">
-            <img class="event-photo" src="ceremonie.jpg" alt="Sfeervolle trouwceremonie" loading="lazy" decoding="async" />
+          <article
+            class="ceremonie"
+            data-location="Larstraat 198, 8930 Menen"
+            data-detail="Het moment waarop we elkaar het ja-woord geven, omringd door de mensen die ons dierbaar zijn."
+          >
+            <button type="button" class="event-photo-action" aria-label="Open details over de ceremonie" aria-haspopup="dialog" aria-controls="timelineDialog">
+              <img class="event-photo" src="ceremonie.jpg" alt="Sfeervolle trouwceremonie" loading="lazy" decoding="async" />
+            </button>
             <div class="event-content">
               <span class="event-number" aria-hidden="true">01</span>
               <p class="event-date">Vrijdag <span>·</span> 8 oktober</p>
               <p class="title">Ceremonie</p>
               <time class="info" datetime="2027-10-08T14:00">14:00 <span>—</span> 15:00</time>
               <p class="sub-info">Larstraat 198<br />8930 Menen, België</p>
+              <button type="button" class="event-more" aria-haspopup="dialog" aria-controls="timelineDialog">
+                Meer over dit moment <span aria-hidden="true">&rarr;</span>
+              </button>
             </div>
           </article>
-          <article class="ceremonie">
-            <img class="event-photo" src="receptie.jpg" alt="Feestelijk gedekte tafel voor de receptie" loading="lazy" decoding="async" />
+          <article class="ceremonie" data-detail="Na de ceremonie heffen we samen het glas. Er is tijd om elkaar te begroeten en gezellig bij te praten.">
+            <button type="button" class="event-photo-action" aria-label="Open details over de receptie" aria-haspopup="dialog" aria-controls="timelineDialog">
+              <img class="event-photo" src="receptie.jpg" alt="Feestelijk gedekte tafel voor de receptie" loading="lazy" decoding="async" />
+            </button>
             <div class="event-content">
               <span class="event-number" aria-hidden="true">02</span>
               <p class="event-date">Samen klinken</p>
               <p class="title">Receptie</p>
               <time class="info" datetime="2027-10-08T18:00">18:00 <span>—</span> 19:00</time>
               <p class="sub-info">Op ons, op jullie, op de liefde</p>
+              <button type="button" class="event-more" aria-haspopup="dialog" aria-controls="timelineDialog">
+                Meer over dit moment <span aria-hidden="true">&rarr;</span>
+              </button>
             </div>
           </article>
-          <article class="ceremonie">
-            <img class="event-photo" src="dinner.jpg" alt="Een mooi opgedekte tafel voor het diner" loading="lazy" decoding="async" />
+          <article class="ceremonie" data-detail="We genieten samen van het diner en nemen rustig de tijd voor mooie verhalen en elkaars gezelschap.">
+            <button type="button" class="event-photo-action" aria-label="Open details over het diner" aria-haspopup="dialog" aria-controls="timelineDialog">
+              <img class="event-photo" src="dinner.jpg" alt="Een mooi opgedekte tafel voor het diner" loading="lazy" decoding="async" />
+            </button>
             <div class="event-content">
               <span class="event-number" aria-hidden="true">03</span>
               <p class="event-date">Aan tafel</p>
               <p class="title">Diner</p>
               <time class="info" datetime="2027-10-08T19:00">19:00 <span>—</span> 21:00</time>
               <p class="sub-info">Lekker eten en mooie verhalen</p>
+              <button type="button" class="event-more" aria-haspopup="dialog" aria-controls="timelineDialog">
+                Meer over dit moment <span aria-hidden="true">&rarr;</span>
+              </button>
             </div>
           </article>
-          <article class="ceremonie">
-            <img class="event-photo" src="first-dance.jpg" alt="Trouwboeket in romantische belichting" loading="lazy" decoding="async" />
+          <article class="ceremonie" data-detail="Een bijzonder moment waarop we onze eerste dans als echtpaar met jullie delen.">
+            <button type="button" class="event-photo-action" aria-label="Open details over de eerste dans" aria-haspopup="dialog" aria-controls="timelineDialog">
+              <img class="event-photo" src="first-dance.jpg" alt="Trouwboeket in romantische belichting" loading="lazy" decoding="async" />
+            </button>
             <div class="event-content">
               <span class="event-number" aria-hidden="true">04</span>
               <p class="event-date">Een moment voor ons twee</p>
               <p class="title">Eerste dans</p>
               <time class="info" datetime="2027-10-08T21:00">21:00</time>
               <p class="sub-info">Onze eerste dans als echtpaar</p>
+              <button type="button" class="event-more" aria-haspopup="dialog" aria-controls="timelineDialog">
+                Meer over dit moment <span aria-hidden="true">&rarr;</span>
+              </button>
             </div>
           </article>
-          <article class="ceremonie">
-            <img class="event-photo" src="dansfeest.jpg" alt="Sfeervolle lichtshow met dansende feestgangers" loading="lazy" decoding="async" />
+          <article class="ceremonie" data-detail="Na de eerste dans vieren we de avond samen verder. We hopen jullie op de dansvloer te zien.">
+            <button type="button" class="event-photo-action" aria-label="Open details over het dansfeest" aria-haspopup="dialog" aria-controls="timelineDialog">
+              <img class="event-photo" src="dansfeest.jpg" alt="Sfeervolle lichtshow met dansende feestgangers" loading="lazy" decoding="async" />
+            </button>
             <div class="event-content">
               <span class="event-number" aria-hidden="true">05</span>
               <p class="event-date">De avond is nog jong</p>
               <p class="title">Dansfeest</p>
               <time class="info" datetime="2027-10-08T21:00">Vanaf 21:00</time>
               <p class="sub-info">Samen maken we herinneringen</p>
+              <button type="button" class="event-more" aria-haspopup="dialog" aria-controls="timelineDialog">
+                Meer over dit moment <span aria-hidden="true">&rarr;</span>
+              </button>
             </div>
           </article>
         </div>
       </section>
 
+      <!-- Verhaal van Jadzia en Kevin. -->
       <section class="story-section page-section" id="verhaal" aria-labelledby="story-title">
         <div class="story-image-wrap">
           <img
@@ -176,21 +211,22 @@
         </div>
       </section>
 
+      <!-- Kledinginspiratie in de kleuren van de site. -->
       <section class="dresscode-section page-section" id="dresscode" aria-labelledby="dresscode-title">
         <div class="dresscode-copy">
           <p class="eyebrow">Kleding waarin jij je fijn voelt</p>
-          <h2 id="dresscode-title">Herfst op z’n mooist</h2>
+          <h2 id="dresscode-title">Zachte tinten, samen stralen</h2>
           <p class="dresscode-lead">Jouw aanwezigheid is het belangrijkste voor ons.</p>
           <p>
             Kom zoals je bent; een speciale outfit is niet nodig. Zin in wat
-            inspiratie? Ons thema is herfst: denk aan warme, natuurlijke tinten.
+            inspiratie? Kies gerust voor saliegroen, champagne, blush, taupe of een andere zachte, natuurlijke tint.
           </p>
-          <ul class="autumn-colors" aria-label="Kleureninspiratie voor het herfstthema">
-            <li class="autumn-color autumn-color-orange"><span>Roest</span></li>
-            <li class="autumn-color autumn-color-yellow"><span>Oker</span></li>
-            <li class="autumn-color autumn-color-red"><span>Bordeaux</span></li>
-            <li class="autumn-color autumn-color-brown"><span>Kastanje</span></li>
-            <li class="autumn-color autumn-color-sage"><span>Salie</span></li>
+          <ul class="autumn-colors" aria-label="Kleureninspiratie voor onze trouwdag">
+            <li class="autumn-color autumn-color-orange"><span>Blush</span></li>
+            <li class="autumn-color autumn-color-yellow"><span>Champagne</span></li>
+            <li class="autumn-color autumn-color-red"><span>Olijf</span></li>
+            <li class="autumn-color autumn-color-brown"><span>Taupe</span></li>
+            <li class="autumn-color autumn-color-sage"><span>Saliegroen</span></li>
           </ul>
         </div>
         <div class="dresscode-art" aria-hidden="true">
@@ -220,6 +256,7 @@
         </div>
       </section>
 
+      <!-- Laatste uitnodiging om de komst te bevestigen. -->
       <section class="rsvp-banner" aria-labelledby="rsvp-title">
         <div>
           <p class="eyebrow">We vieren het liefst samen</p>
@@ -231,10 +268,25 @@
       </section>
     </main>
 
+    <!-- Dit venster wordt gevuld met de gegevens van het gekozen tijdlijnmoment. -->
+    <dialog class="timeline-dialog" id="timelineDialog" aria-labelledby="timelineDialogTitle">
+      <div class="timeline-dialog-panel">
+        <button type="button" class="timeline-dialog-close" aria-label="Venster sluiten">&times;</button>
+        <p class="eyebrow" id="timelineDialogDate"></p>
+        <h2 id="timelineDialogTitle"></h2>
+        <p class="timeline-dialog-row"><span class="timeline-dialog-label">Tijd</span><span id="timelineDialogTime"></span></p>
+        <p class="timeline-dialog-row timeline-dialog-location" id="timelineDialogLocationRow" hidden><span class="timeline-dialog-label">Locatie</span><span id="timelineDialogLocation"></span></p>
+        <p class="timeline-dialog-copy" id="timelineDialogDetail"></p>
+      </div>
+    </dialog>
+
+    <!-- Afsluiting van de uitnodigingspagina. -->
     <footer class="site-footer">
       <span class="footer-flourish" aria-hidden="true">♡</span>
       <p class="footer-names">Jadzia <span>&</span> Kevin</p>
       <p>8 oktober 2027 <span aria-hidden="true">·</span> Een dag vol liefde, voor altijd in ons hart</p>
     </footer>
+    <!-- Regelt het openen en sluiten van de tijdlijnvensters. -->
+    <script src="timeline.js"></script>
   </body>
 </html>

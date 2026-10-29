@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Elementen van het RSVP-formulier en de dynamische gastlijst.
     const rsvpForm = document.getElementById('rsvpForm');
     const aanwezigheidRadios = document.querySelectorAll('input[name="aanwezigheid"]');
     
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Jouw gekoppelde Google Apps Script Web-app URL
     const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzn1u7extmyK3UDi2qASUXrNT5-o8O8dcShzuK9SZBwN0ihVzDJ6cVQ40eOiEAUeDEq/exec";
 
+    // Toon gastgegevens alleen als de genodigde aanwezig is.
     function updateFormulierZichtbaarheid() {
         const gekozenWaarde = document.querySelector('input[name="aanwezigheid"]:checked');
         if (!gekozenWaarde) return;
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         radio.addEventListener('change', updateFormulierZichtbaarheid);
     });
 
-    // Helper om bestand om te zetten naar Base64
+    // Zet een gekozen foto om naar Base64 zodat die meegestuurd kan worden.
     function convertFileToBase64(file) {
         return new Promise((resolve, reject) => {
             if (!file) {
@@ -48,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Functie om een gast-blok te maken (Gast 1 is de hoofdgast die invult)
+    // Maak het invoerblok voor de hoofdgast of een extra gezinslid.
     function maakGastBlok(index) {
         const isHoofdgast = (index === 1);
         const idSuffix = Date.now() + Math.random().toString(36).substring(2, 7);
@@ -110,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return div;
     }
 
-    // Zorgt dat Gast 1 (hoofdgast) altijd aanwezig is, plus N extra gezinsleden
+    // Houd het aantal gastblokken gelijk aan de gekozen hoeveelheid personen.
     function herberekenGastenLijst() {
         const extraGezinsleden = parseInt(aantalGezinsledenInput.value) || 0;
         const gewenstTotaal = 1 + extraGezinsleden;
@@ -137,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
         hernummerGasten();
     }
 
+    // Werk zichtbare gastnummers bij na toevoegen of verwijderen.
     function hernummerGasten() {
         const blokken = gezinsledenLijst.querySelectorAll('.gezinslid-blok');
         blokken.forEach((blok, idx) => {
@@ -160,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     herberekenGastenLijst();
 
-    // Formulier verzenden en doorsturen naar Google Sheets
+    // Verzamelt de RSVP en gastgegevens en stuurt ze naar Google Sheets.
     rsvpForm.addEventListener('submit', async function(e) {
         e.preventDefault(); 
 
